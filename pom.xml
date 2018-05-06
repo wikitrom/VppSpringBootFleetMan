@@ -35,6 +35,19 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+
+		<!--  required if we use JSP dependent Views -->
+		<dependency>
+			<groupId>org.apache.tomcat.embed</groupId>
+			<artifactId>tomcat-embed-jasper</artifactId>
+		</dependency>
+
+		<!--  required if we use JSTL in our JSP files -->
+        <dependency>
+             <groupId>javax.servlet</groupId>
+             <artifactId>jstl</artifactId>
+         </dependency>
+
 	</dependencies>
 
 	<build>
@@ -44,6 +57,19 @@
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
 		</plugins>
+		  <resources>
+
+	<!-- ONE way to make sure the application.properties file is copied across
+		 when running the project locally as an embedded application
+	 -->
+    <resource>
+      <filtering>true</filtering>
+      <directory>src/main/resources</directory>
+      <includes>
+	      <include>application.properties</include>
+      </includes>
+    </resource>
+  </resources>
 	</build>
 
 
