@@ -42,6 +42,13 @@
 			<artifactId>h2</artifactId>
 		</dependency>
 
+		<!--  Spring Boot Development Tool - provides stuff useful during development -->
+      	<dependency>
+    	    <groupId>org.springframework.boot</groupId>
+    	    <artifactId>spring-boot-devtools</artifactId>
+    	    <optional>true</optional>
+      	</dependency>
+
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
