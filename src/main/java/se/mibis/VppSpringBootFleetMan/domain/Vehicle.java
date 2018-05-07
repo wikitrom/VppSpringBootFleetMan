@@ -17,21 +17,25 @@ public class Vehicle {
 	private String latLong;
 	private String currentDriver;
 
-	// public Vehicle() {
-	// }
+	// -- constructors --
+	public Vehicle() {  // hibernate requirement
+	}
+
+
+	// -- methods --
 
 	public String toString() {
 		return this.name + " odometer " + this.odometer;
 	}
-	
-	
+
+
 	// -- getters
-	
+
 	public String getName() {
 		return name;
 	}
-	
-	
+
+
 	public int getOdometer() {
 		return odometer;
 	}
@@ -48,9 +52,9 @@ public class Vehicle {
 		return currentDriver;
 	}
 
-	
+
 	// -- setters
-	
+
 	public void setName(String name) {
 		this.name = name;
 	}

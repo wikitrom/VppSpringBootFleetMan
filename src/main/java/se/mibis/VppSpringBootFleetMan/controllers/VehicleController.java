@@ -24,7 +24,6 @@ public class VehicleController {
 	@PostMapping(value = "/newVehicle.html")
 	public String newVehicle(Vehicle vehicle) {
 		data.save(vehicle);
-		System.out.println("UABTROM: BLABLALBA");
 		return "redirect:/website/vehicles/list.html";
 	}
 
