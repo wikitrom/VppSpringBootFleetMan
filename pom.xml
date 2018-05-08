@@ -15,7 +15,7 @@
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>2.0.1.RELEASE</version>
-		<relativePath/> <!-- lookup parent from repository -->
+		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 
 	<properties>
@@ -42,12 +42,28 @@
 			<artifactId>h2</artifactId>
 		</dependency>
 
-		<!--  Spring Boot Development Tool - provides stuff useful during development -->
-      	<dependency>
-    	    <groupId>org.springframework.boot</groupId>
-    	    <artifactId>spring-boot-devtools</artifactId>
-    	    <optional>true</optional>
-      	</dependency>
+		<!-- mySQL database support -->
+		<!--
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+		</dependency>
+     -->
+
+		<!--  security support -->
+		<!--
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-security</artifactId>
+		</dependency>
+      -->
+
+		<!-- Spring Boot Development Tool - provides stuff useful during development -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-devtools</artifactId>
+			<optional>true</optional>
+		</dependency>
 
 
 		<dependency>
@@ -56,17 +72,17 @@
 			<scope>test</scope>
 		</dependency>
 
-		<!--  required if we use JSP dependent Views -->
+		<!-- required if we use JSP dependent Views -->
 		<dependency>
 			<groupId>org.apache.tomcat.embed</groupId>
 			<artifactId>tomcat-embed-jasper</artifactId>
 		</dependency>
 
-		<!--  required if we use JSTL in our JSP files -->
-        <dependency>
-             <groupId>javax.servlet</groupId>
-             <artifactId>jstl</artifactId>
-         </dependency>
+		<!-- required if we use JSTL in our JSP files -->
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>jstl</artifactId>
+		</dependency>
 
 	</dependencies>
 
@@ -77,19 +93,18 @@
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
 		</plugins>
-		  <resources>
+		<resources>
 
-	<!-- ONE way to make sure the application.properties file is copied across
-		 when running the project locally as an embedded application
-	 -->
-    <resource>
-      <filtering>true</filtering>
-      <directory>src/main/resources</directory>
-      <includes>
-	      <include>application.properties</include>
-      </includes>
-    </resource>
-  </resources>
+			<!-- ONE way to make sure the application.properties file is copied across
+				when running the project locally as an embedded application -->
+			<resource>
+				<filtering>true</filtering>
+				<directory>src/main/resources</directory>
+				<includes>
+					<include>application.properties</include>
+				</includes>
+			</resource>
+		</resources>
 	</build>
 
 
